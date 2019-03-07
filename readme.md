@@ -31,12 +31,12 @@
 
 # [摘要](src/SUMMARY.md)
 
-[关于本指南](src/about-this-guide.zh.md)
+- [x] [关于本指南](src/about-this-guide.zh.md)
 
 ---
 
-- [ ] [第 1 部分：构建，调试和贡献 Rustc](src/part-1-intro.zh.md)
-- [ ] [关于编译团队](src/compiler-team.zh.md)
+- [x] [第 1 部分：构建，调试和帮助 Rustc](src/part-1-intro.zh.md)
+- [x] [关于编译器团队](src/compiler-team.zh.md)
 - [ ] [如何构建编译器并运行您构建的内容](src/how-to-build-and-run.zh.md)
   - [ ] [构建和安装分发工件](src/build-install-distribution-artifacts.zh.md)
   - [ ] [记录编译器](src/compiler-documenting.zh.md)
@@ -121,7 +121,6 @@
 - [ ] [附录 C：术语表](src/appendix/glossary.zh.md)
 - [ ] [附录 D：代码索引](src/appendix/code-index.zh.md)
 - [ ] [src/important-links.zh.md]
-
 
 <!-- doc-templite END generated -->
 

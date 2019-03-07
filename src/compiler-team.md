@@ -79,7 +79,7 @@ merge a PR
 The guidelines for reviewers are as follows:
 
 - You are always welcome to review any PR, regardless of who it is
-  assigned to.  However, do not r+ PRs unless:
+  assigned to. However, do not r+ PRs unless:
   - You are confident in that part of the code.
   - You are confident that nobody else wants to review it first.
     - For example, sometimes people will express a desire to review a
@@ -89,7 +89,7 @@ The guidelines for reviewers are as follows:
   Rust project, so it is expected that you will go above and beyond
   when it comes to the [Code of Conduct].
 
-[Code of Conduct]: https://www.rust-lang.org/policies/code-of-conduct
+[code of conduct]: https://www.rust-lang.org/policies/code-of-conduct
 
 ### high-five
 
@@ -98,8 +98,7 @@ rotation. high-five is the bot that assigns incoming PRs to
 reviewers. If you are added, you will be randomly selected to review
 PRs. If you find you are assigned a PR that you don't feel comfortable
 reviewing, you can also leave a comment like `r? @so-and-so` to assign
-to someone else — if you don't know who to request, just write `r?
-@nikomatsakis for reassignment` and @nikomatsakis will pick someone
+to someone else — if you don't know who to request, just write `r? @nikomatsakis for reassignment` and @nikomatsakis will pick someone
 for you.
 
 [hi5]: https://github.com/rust-highfive
