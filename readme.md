@@ -9,7 +9,7 @@
 [size-img]: https://packagephobia.now.sh/badge?p=Name
 [size]: https://packagephobia.now.sh/result?p=Name
 
-「 构建一个解释 rustc 如何工作的指南 」
+「 构建一个，解释 rustc 如何工作的指南 」
 
 [中文](readme.md) | [english](https://github.com/rust-lang/rustc-guide)
 
@@ -134,7 +134,7 @@
 
 ---
 
-这是一项协作工作，旨在构建一个解释 rustc 如何工作的指南。本指南的目的是帮助新贡献者认清 rustc，以及帮助更有经验的人找出他们之前没有使用过的一些新部分编译器。
+这是一项协作工作，旨在构建一个，解释 rustc 如何工作的指南。本指南的目的是帮助新贡献者认清 rustc，以及帮助更有经验的人找出他们之前没有使用过的一些新部分编译器。
 
 [你可在该网页阅读最新版本的指南.](https://rust-lang-nursery.github.io/rustc-guide/)
 
