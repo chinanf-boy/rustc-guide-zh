@@ -47,10 +47,10 @@
 - [x] [演练：贡献示例](src/walkthrough.zh.md)
 - [x] [实现新功能](src/implementing_new_features.zh.md)
 - [x] [功能的稳定过程](src/stabilization_guide.zh.md)
-- [ ] [调试编译器](src/compiler-debugging.zh.md)
+- [x] [调试编译器](src/compiler-debugging.zh.md)
 - [x] [分析编译器](src/profiling.zh.md)
   - [ ] [用 linux perf 工具](src/profiling/with_perf.zh.md)
-- [ ] [编码惯例](src/conventions.zh.md)
+- [x] [编码惯例](src/conventions.zh.md)
 
 ---
 
