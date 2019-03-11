@@ -54,9 +54,9 @@
 
 ---
 
-- [ ] [第 2 部分：rustc 如何工作](src/part-2-intro.zh.md)
-- [ ] [编译器源的高级概述](src/high-level-overview.zh.md)
-- [ ] [Rustc 驱动程序](src/rustc-driver.zh.md)
+- [x] [第 2 部分：rustc 如何工作](src/part-2-intro.zh.md)
+- [x] [编译器源代码的天台风景](src/high-level-overview.zh.md)
+- [x] [Rustc 驱动程序](src/rustc-driver.zh.md)
   - [ ] [Rustdoc](src/rustdoc.zh.md)
 - [ ] [查询：需求驱动的编译](src/query.zh.md)
   - [ ] [详细查询评估模型](src/queries/query-evaluation-model-in-detail.zh.md)
