@@ -12,7 +12,7 @@ HIR——“高级中间表示法”——是大多数RustC中使用的主要IR�
 
 ### 带外存储和`Crate`类型
 
-HIR中的顶级数据结构是[`Crate`]它存储当前正在编译的板条箱的内容（我们只为当前板条箱构建HIR）。而在AST中，板条箱数据结构基本上只包含根模块hir`Crate`结构包含许多地图和其他东西，用于组织板条箱的内容，以便于访问。
+HIR中的顶级数据结构是[`Crate`]它存储当前正在编译的箱子的内容（我们只为当前箱子构建HIR）。而在AST中，箱子数据结构基本上只包含根模块hir`Crate`结构包含许多地图和其他东西，用于组织箱子的内容，以便于访问。
 
 [`crate`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc/hir/struct.Crate.html
 
@@ -28,7 +28,7 @@ mod foo {
 
 [`mod`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc/hir/struct.Mod.html
 
-这种表示的一个很好的结果是，通过迭代这些映射中的键值对，可以迭代板条箱中的所有项（不需要拖拽整个hir）。对于特征项和impl项，以及“body”（解释如下）都有类似的映射。
+这种表示的一个很好的结果是，通过迭代这些映射中的键值对，可以迭代箱子中的所有项（不需要拖拽整个hir）。对于特征项和impl项，以及“body”（解释如下）都有类似的映射。
 
 以这种方式设置表示的另一个原因是为了更好地与增量编译集成。这样，如果您可以访问[`&hir::Item`]（例如，对于国防部`foo`）不会立即访问函数的内容。`bar()`. 相反，您只能访问**身份证件**对于`bar()`，并且必须调用一些函数来查找`bar()`给定其ID；这使编译器有机会观察您访问的数据`bar()`，然后记录依赖项。
 
@@ -41,14 +41,14 @@ mod foo {
 大多数必须在hir中处理事物的代码倾向于不将引用带到hir中，而是带到hir中。*标识符编号*（或者只是“ID”）。现在，您将发现四种正在使用的标识符：
 
 -   [`DefId`]主要命名为“定义”或顶级项。
-    -   你可以想到[`DefId`]作为一条非常明确和完整的道路的简称，比如`std::collections::HashMap`.但是，这些路径能够命名在正常情况下不可命名的事物（例如IMPLS），并且它们还包括关于板条箱的额外信息（例如其版本号，因为同一板条箱的两个版本可以共存）。
-    -   A [`DefId`]实际上由两部分组成，`CrateNum`（识别板条箱）和`DefIndex`（索引到每个板条箱维护的项目列表中）。
+    -   你可以想到[`DefId`]作为一条非常明确和完整的道路的简称，比如`std::collections::HashMap`.但是，这些路径能够命名在正常情况下不可命名的事物（例如IMPLS），并且它们还包括关于箱子的额外信息（例如其版本号，因为同一箱子的两个版本可以共存）。
+    -   A [`DefId`]实际上由两部分组成，`CrateNum`（识别箱子）和`DefIndex`（索引到每个箱子维护的项目列表中）。
 -   [`HirId`]将特定项的索引与该项内的偏移量组合在一起。
     -   关键点[`HirId`]是这样吗*相对的*某些项目（通过[`DefId`]）
--   [`BodyId`]，这是引用板条箱中特定主体（函数或常量的定义）的绝对标识符。它目前实际上是一个“新型的”[`NodeId`].
+-   [`BodyId`]，这是引用箱子中特定主体（函数或常量的定义）的绝对标识符。它目前实际上是一个“新型的”[`NodeId`].
 -   [`NodeId`]，它是一个绝对ID，用于标识HIR树中的单个节点。
     -   虽然它们仍在普遍使用，**他们正逐渐被淘汰**.
-    -   由于它们在板条箱中是绝对的，因此在树的任何位置添加一个新节点会导致[`NodeId`]更改板条箱中所有后续代码。这对于增量编译是很糟糕的，正如您可能想象的那样。
+    -   由于它们在箱子中是绝对的，因此在树的任何位置添加一个新节点会导致[`NodeId`]更改箱子中所有后续代码。这对于增量编译是很糟糕的，正如您可能想象的那样。
 
 [`defid`]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc/hir/def_id/struct.DefId.html
 
@@ -70,7 +70,7 @@ mod foo {
 
 [number of methods]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc/hir/map/struct.Map.html#methods
 
-例如，如果您有[`DefId`]，您想将其转换为[`NodeId`]，你可以使用[`tcx.hir.as_local_node_id(def_id)`][as_local_node_id]. 返回一个`Option<NodeId>`–这将是`None`如果def id引用了当前板条箱之外的某个对象（从那时起它就没有hir节点），则返回`Some(n)`在哪里？`n`是定义的节点ID。
+例如，如果您有[`DefId`]，您想将其转换为[`NodeId`]，你可以使用[`tcx.hir.as_local_node_id(def_id)`][as_local_node_id]. 返回一个`Option<NodeId>`–这将是`None`如果def id引用了当前箱子之外的某个对象（从那时起它就没有hir节点），则返回`Some(n)`在哪里？`n`是定义的节点ID。
 
 [as_local_node_id]: https://doc.rust-lang.org/nightly/nightly-rustc/rustc/hir/map/struct.Map.html#method.as_local_node_id
 

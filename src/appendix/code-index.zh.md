@@ -7,7 +7,7 @@ rustc有很多重要的数据结构。这是尝试提供一些指导，以便在
 | `BodyId` | 结构 | 四种类型的HIR节点标识符之一 | [HIR中的标识符] | [SRC / librustc / HIR / mod.rs](https://doc.rust-lang.org/nightly/nightly-rustc/rustc/hir/struct.BodyId.html) |
 | `CompileState` | 结构 | 在每个编译器传递时传递给回调的状态 | [Rustc驱动程序] | [SRC / librustc_driver / driver.rs](https://doc.rust-lang.org/nightly/nightly-rustc/rustc_driver/driver/struct.CompileState.html) |
 | `ast::Crate` | 结构 | 已解析的包的语法级表示 | [解析器] | [SRC / librustc / HIR / mod.rs](https://doc.rust-lang.org/nightly/nightly-rustc/syntax/ast/struct.Crate.html) |
-| `hir::Crate` | 结构 | 一个更加抽象，编译器友好的板条箱AST形式 | [Hir] | [SRC / librustc / HIR / mod.rs](https://doc.rust-lang.org/nightly/nightly-rustc/rustc/hir/struct.Crate.html) |
+| `hir::Crate` | 结构 | 一个更加抽象，编译器友好的箱子AST形式 | [Hir] | [SRC / librustc / HIR / mod.rs](https://doc.rust-lang.org/nightly/nightly-rustc/rustc/hir/struct.Crate.html) |
 | `DefId` | 结构 | 四种类型的HIR节点标识符之一 | [HIR中的标识符] | [SRC / librustc / HIR / def_id.rs](https://doc.rust-lang.org/nightly/nightly-rustc/rustc/hir/def_id/struct.DefId.html) |
 | `DiagnosticBuilder` | 结构 | 用于构建编译器诊断的结构，例如错误或lints | [发出诊断] | [SRC / librustc_errors / diagnostic_builder.rs](https://doc.rust-lang.org/nightly/nightly-rustc/rustc_errors/struct.DiagnosticBuilder.html) |
 | `DocContext` | 结构 | rustdoc在爬过箱子以收集其文档时使用的状态容器 | [Rustdoc] | [SRC / librustdoc / core.rs](https://github.com/rust-lang/rust/blob/master/src/librustdoc/core.rs) |

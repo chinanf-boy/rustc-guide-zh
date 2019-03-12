@@ -24,7 +24,7 @@ mod my_priv_mod {
 
 因此，私人物品可以很容易地进行测试，而不必担心如何将它们暴露在任何类型的外部测试设备中。这是铁锈试验的人机工程学的关键。然而，从语义上讲，这相当奇怪。什么样的`main`如果这些测试不可见，函数是否调用它们？究竟是什么`rustc --test`干什么？
 
-`#[test]`在编译器的[`libsyntax`机箱][libsyntax]. 本质上，它是一个奇特的宏，可以用3个步骤重写板条箱：
+`#[test]`在编译器的[`libsyntax`机箱][libsyntax]. 本质上，它是一个奇特的宏，可以用3个步骤重写箱子：
 
 #### 步骤1:重新导出
 
@@ -50,7 +50,7 @@ mod my_priv_mod {
 
 #### 步骤2：线束生成
 
-既然我们的测试可以从板条箱的底部进行，我们需要对它们做些什么。`libsyntax`生成这样的模块：
+既然我们的测试可以从箱子的底部进行，我们需要对它们做些什么。`libsyntax`生成这样的模块：
 
 ```rust,ignore
 pub mod __test {
@@ -78,7 +78,7 @@ fn foo() {
 }
 ```
 
-这意味着我们的测试不仅仅是简单的函数，它们还有配置信息。`test`将此配置数据编码到名为[`TestDesc`][testdesc]. 对于板条箱中的每个测试功能，`libsyntax`将分析其属性并生成`TestDesc`实例。然后它结合了`TestDesc`和测试函数`TestDescAndFn`结构，`test_static_main`继续运转。对于给定的测试，生成的`TestDescAndFn`实例看起来是这样的：
+这意味着我们的测试不仅仅是简单的函数，它们还有配置信息。`test`将此配置数据编码到名为[`TestDesc`][testdesc]. 对于箱子中的每个测试功能，`libsyntax`将分析其属性并生成`TestDesc`实例。然后它结合了`TestDesc`和测试函数`TestDescAndFn`结构，`test_static_main`继续运转。对于给定的测试，生成的`TestDescAndFn`实例看起来是这样的：
 
 ```rust,ignore
 self::test::TestDescAndFn{

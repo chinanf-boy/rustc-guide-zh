@@ -244,7 +244,7 @@ declare_lint! {
 
 #### 甚至在编译器的早期
 
-语法分析器（解析器）`libsyntax`）有趣的是，它不能依赖于任何其他`librustc*`板条箱特别是，它不能依赖于`librustc::lint`或`librustc_lint`，其中定义了所有编译器linting基础结构。太麻烦了！
+语法分析器（解析器）`libsyntax`）有趣的是，它不能依赖于任何其他`librustc*`箱子特别是，它不能依赖于`librustc::lint`或`librustc_lint`，其中定义了所有编译器linting基础结构。太麻烦了！
 
 为了解决这个问题，`libsyntax`定义自己的缓冲lint类型，其中`ParseSess::buffer_lint`使用。在宏扩展之后，这些缓冲的线头将被转储到`Session::buffered_lints`由编译器的其余部分使用。
 
