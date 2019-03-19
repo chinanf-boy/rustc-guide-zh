@@ -29,6 +29,8 @@
 [last]: https://img.shields.io/github/last-commit/rust-lang/rustc-guide.svg
 [commit]: https://github.com/rust-lang/rustc-guide/tree/0456aaa9e197e6d3f8349bca6299becb836e4070
 
+<!-- doc-templite END generated -->
+
 # [摘要](src/SUMMARY.md)
 
 - [x] [关于本指南](src/about-this-guide.zh.md)
@@ -62,15 +64,15 @@
   - [ ] [详细查询评估模型](src/queries/query-evaluation-model-in-detail.zh.md)
   - [ ] [增量编译](src/queries/incremental-compilation.zh.md)
   - [ ] [增量编译详细信息](src/queries/incremental-compilation-in-detail.zh.md)
-  - [ ] [调试和测试](src/incrcomp-debugging.zh.md)
-- [ ] [解析器](src/the-parser.zh.md)
-- [ ] [`#[test]`履行](src/test-implementation.zh.md)
-- [ ] [宏观扩张](src/macro-expansion.zh.md)
-- [ ] [名称解析](src/name-resolution.zh.md)
-- [ ] [HIR（高级 IR）](src/hir.zh.md)
-  - [ ] [将 AST 降低到 HIR](src/lowering.zh.md)
-  - [ ] [调试](src/hir-debugging.zh.md)
-- [ ] [该`ty`module：表示类型](src/ty.zh.md)
+  - [x] [调试和测试](src/incrcomp-debugging.zh.md)
+- [x] [解析器](src/the-parser.zh.md)
+- [x] [`#[test]`履行](src/test-implementation.zh.md)
+- [x] [宏观扩张](src/macro-expansion.zh.md)
+- [x] [名称解析](src/name-resolution.zh.md)
+- [x] [HIR（高级 IR）](src/hir.zh.md)
+  - [x] [将 AST 降层到 HIR](src/lowering.zh.md)
+  - [x] [调试](src/hir-debugging.zh.md)
+- [ ] [`ty`模块：描述类型](src/ty.zh.md)
 - [ ] [种](src/kinds.zh.md)
 - [ ] [类型推断](src/type-inference.zh.md)
 - [ ] [特质解决（旧式）](src/traits/resolution.zh.md)
@@ -78,13 +80,13 @@
   - [ ] [缓存细微之处](src/traits/caching.zh.md)
   - [ ] [专业化](src/traits/specialization.zh.md)
 - [ ] [特质解决（新式）](src/traits/index.zh.md)
-  - [ ] [降低到逻辑](src/traits/lowering-to-logic.zh.md)
+  - [ ] [降层到逻辑](src/traits/lowering-to-logic.zh.md)
     - [ ] [目标和条款](src/traits/goals-and-clauses.zh.md)
     - [ ] [平等和相关类型](src/traits/associated-types.zh.md)
     - [ ] [隐含的界限](src/traits/implied-bounds.zh.md)
     - [ ] [区域限制](src/traits/regions.zh.md)
-    - [ ] [降低模块在 rustc](src/traits/lowering-module.zh.md)
-    - [ ] [降低规则](src/traits/lowering-rules.zh.md)
+    - [ ] [降层模块在 rustc](src/traits/lowering-module.zh.md)
+    - [ ] [降层规则](src/traits/lowering-rules.zh.md)
     - [ ] [良好的形成检查](src/traits/wf.zh.md)
   - [ ] [规范查询](src/traits/canonical-queries.zh.md)
     - [ ] [规范化](src/traits/canonicalization.zh.md)
@@ -121,8 +123,6 @@
 - [ ] [附录 C：术语表](src/appendix/glossary.zh.md)
 - [ ] [附录 D：代码索引](src/appendix/code-index.zh.md)
 - [ ] [src/important-links.zh.md]
-
-<!-- doc-templite END generated -->
 
 ### 贡献
 
