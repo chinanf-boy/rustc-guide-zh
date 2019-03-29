@@ -21,10 +21,9 @@
 <!-- repo = 'rust-lang/rustc-guide' -->
 <!-- commit = '0456aaa9e197e6d3f8349bca6299becb836e4070' -->
 <!-- time = '2019-03-01' -->
-
-| 翻译的原文 | 与日期        | 最新更新 | 更多                       |
-| ---------- | ------------- | -------- | -------------------------- |
-| [commit]   | ⏰ 2019-03-01 | ![last]  | [中文翻译][translate-list] |
+翻译的原文 | 与日期 | 最新更新 | 更多
+---|---|---|---
+[commit] | ⏰ 2019-03-01 | ![last] | [中文翻译][translate-list]
 
 [last]: https://img.shields.io/github/last-commit/rust-lang/rustc-guide.svg
 [commit]: https://github.com/rust-lang/rustc-guide/tree/0456aaa9e197e6d3f8349bca6299becb836e4070
@@ -66,20 +65,20 @@
   - [ ] [增量编译详细信息](src/queries/incremental-compilation-in-detail.zh.md)
   - [x] [调试和测试](src/incrcomp-debugging.zh.md)
 - [x] [解析器](src/the-parser.zh.md)
-- [x] [`#[test]`履行](src/test-implementation.zh.md)
+- [x] [`#[test]`实现](src/test-implementation.zh.md)
 - [x] [宏观扩张](src/macro-expansion.zh.md)
 - [x] [名称解析](src/name-resolution.zh.md)
 - [x] [HIR（高级 IR）](src/hir.zh.md)
   - [x] [将 AST 降层到 HIR](src/lowering.zh.md)
   - [x] [调试](src/hir-debugging.zh.md)
-- [ ] [`ty`模块：描述类型](src/ty.zh.md)
-- [ ] [种](src/kinds.zh.md)
+- [x] [`ty`模块：描述类型](src/ty.zh.md)
+- [x] [kind](src/kinds.zh.md)
 - [ ] [类型推断](src/type-inference.zh.md)
-- [ ] [特质解决（旧式）](src/traits/resolution.zh.md)
-  - [ ] [排名较高的特质界限](src/traits/hrtb.zh.md)
+- [ ] [解决 trait （老式）](src/traits/resolution.zh.md)
+  - [ ] [排名较高的 trait 界限](src/traits/hrtb.zh.md)
   - [ ] [缓存细微之处](src/traits/caching.zh.md)
   - [ ] [专业化](src/traits/specialization.zh.md)
-- [ ] [特质解决（新式）](src/traits/index.zh.md)
+- [ ] [trait 解决（新式）](src/traits/index.zh.md)
   - [ ] [降层到逻辑](src/traits/lowering-to-logic.zh.md)
     - [ ] [目标和条款](src/traits/goals-and-clauses.zh.md)
     - [ ] [平等和相关类型](src/traits/associated-types.zh.md)
@@ -92,7 +91,7 @@
     - [ ] [规范化](src/traits/canonicalization.zh.md)
   - [ ] [SLG 求解器](src/traits/slg.zh.md)
   - [ ] [粉笔概述](src/traits/chalk-overview.zh.md)
-  - [ ] [参考书目](src/traits/bibliography.zh.md)
+  - [x] [参考文献](src/traits/bibliography.zh.md)
 - [ ] [类型检查](src/type-checking.zh.md)
   - [ ] [方法查找](src/method-lookup.zh.md)
   - [ ] [方差](src/variance.zh.md)
@@ -122,7 +121,7 @@
 - [ ] [附录 B：背景材料](src/appendix/background.zh.md)
 - [ ] [附录 C：术语表](src/appendix/glossary.zh.md)
 - [ ] [附录 D：代码索引](src/appendix/code-index.zh.md)
-- [ ] [src/important-links.zh.md]
+<!-- - [ ] [src/important-links.zh.md] -->
 
 ### 贡献
 
@@ -130,7 +129,7 @@
 
 ## 生活
 
-[help me live , live need money 💰](https://github.com/chinanf-boy/live-need-money)
+[If help, **buy** me coffee —— 营养跟不上了，给我来瓶营养快线吧! 💰](https://github.com/chinanf-boy/live-need-money)
 
 ---
 

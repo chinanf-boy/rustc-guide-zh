@@ -1,7 +1,7 @@
-# 区域约束
+# 区域限制
 
-*要写。*
+_TODO。_
 
-粉笔没有地域限制的概念，在本文中，对Rustc的研究还不足以让人担心。
+Chalk 没有地域限制的概念，在本文中，Chalk 在 Rustc 中工作情况来看，还不足以让人担心。
 
-同时，您可以在[类型推断](../type-inference.html#region-constraints)部分。
+同时，您可以在[类型推断](../type-inference.zh.html#region-constraints)，阅读更多区域限制的信息。

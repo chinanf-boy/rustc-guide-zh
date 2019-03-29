@@ -1,4 +1,5 @@
 # Kinds
+
 A `ty::subst::Kind<'tcx>` represents some entity in the type system: a type
 (`Ty<'tcx>`), lifetime (`ty::Region<'tcx>`) or constant (`ty::Const<'tcx>`).
 `Kind` is used to perform substitutions of generic parameters for concrete
@@ -7,6 +8,7 @@ with type arguments. Substitutions are represented using the
 [`Subst` type](#subst) as described below.
 
 ## `Subst`
+
 `ty::subst::Subst<'tcx>` is intuitively simply a slice of `Kind<'tcx>`s,
 acting as an ordered list of substitutions from generic parameters to
 concrete arguments (such as types, lifetimes and consts).
@@ -20,6 +22,7 @@ given item definitions, which should generally be used rather than explicitly
 constructing such substitution slices.
 
 ## `Kind`
+
 The actual `Kind` struct is optimised for space, storing the type, lifetime or
 const as an interned pointer containing a mask identifying its kind (in the
 lowest 2 bits). Unless you are working with the `Subst` implementation
@@ -27,6 +30,7 @@ specifically, you should generally not have to deal with `Kind` and instead
 make use of the safe [`UnpackedKind`](#unpackedkind) abstraction.
 
 ## `UnpackedKind`
+
 As `Kind` itself is not type-safe, the `UnpackedKind` enum provides a more
 convenient and safe interface for dealing with kinds. An `UnpackedKind` can
 be converted to a raw `Kind` using `Kind::from()` (or simply `.into()` when
